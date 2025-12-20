@@ -1,0 +1,28 @@
+{
+  "rewrites": [
+    { "source": "/t5/:linkid", "destination": "/t5/player.html" },
+    { "source": "/m1/:linkid", "destination": "/m1/player.html" },
+    { "source": "/t4/:linkid", "destination": "/t4/player.html" },
+  { "source": "/t3/:linkid", "destination": "/t3/player.html" },
+      { "source": "/my/:linkid", "destination": "/my/player.html" },
+     { "source": "/t/:linkid", "destination": "/t/player.html" },
+    { "source": "/t1/:linkid", "destination": "/t1/player.html" },
+     { "source": "/t2/:linkid", "destination": "/t2/player.html" },
+    { "source": "/al/:linkid", "destination": "/al/player.html" },
+     { "source": "/dh/:linkid", "destination": "/dh/player.html" },
+     { "source": "/ka/:linkid", "destination": "/ka/player.html" },
+    { "source": "/a/:linkid", "destination": "/a/player.html" },
+   { "source": "/ma/:linkid", "destination": "/ma/player.html" },
+    { "source": "/s/:linkid", "destination": "/s/player.html" },
+     { "source": "/k/:linkid", "destination": "/k/player.html" },
+    { "source": "/d/:linkid", "destination": "/d/player.html" },
+    { "source": "/d1/:linkid", "destination": "/d1/player.html" },
+     { "source": "/k1/:linkid", "destination": "/k1/player.html" },
+      { "source": "/s1/:linkid", "destination": "/s1/player.html" },
+    { "source": "/i/:linkid", "destination": "/i/player.html" },
+    { "source": "/f/:linkid", "destination": "/f/player.html" }
+  ]
+  
+} 
+
+

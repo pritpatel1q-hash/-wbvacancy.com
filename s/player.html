@@ -1,411 +1,399 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-
-
-
-
-
-  
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>🎥 Watch Video</title>
 
-<center>
-<div class="code-block-label">Advertisements</div>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
 
-<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
-<script>
-  window.googletag = window.googletag || {cmd: []};
-  googletag.cmd.push(function() {
-    googletag.defineSlot('/23113214187/7-november-top-ad', [[336, 280], [300, 250], 'fluid', [320, 480]], 'div-gpt-ad-1763515950082-0').addService(googletag.pubads());
-    googletag.pubads().enableSingleRequest();
-    googletag.enableServices();
-  });
-</script>
-
-<!-- /23113214187/7-november-top-ad -->
-<div id='div-gpt-ad-1763515950082-0' style='min-width: 300px; min-height: 250px;'>
-  <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1763515950082-0'); });
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "u7j4xefjxp");
   </script>
-</div>
-</center>
 
+  
+  <!-- ✅ Google Publisher Tag (single load) -->
+  <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
+  <script>
+    window.googletag = window.googletag || {cmd: []};
 
+    googletag.cmd.push(function() {
+      /* 🔺 TOP BANNER (navbar ke upar) */
+      googletag.defineSlot(
+        '/23113214187/7-november-top-ad',
+        [[336, 280], [300, 250], 'fluid', [320, 480]],
+        'div-gpt-top-ad'
+      ).addService(googletag.pubads());
 
+      /* 🔻 MID PAGE (navbar ke niche) */
+      googletag.defineSlot(
+        '/23113214187/ad-unit-2',
+        [[250, 250], [336, 280], 'fluid', [320, 480]],
+        'div-gpt-mid-ad'
+      ).addService(googletag.pubads());
 
+      /* 🔻 BOTTOM PAGE (page ke niche) */
+      googletag.defineSlot(
+        '/23113214187/first-initial-ad',
+        [[250, 250], [320, 480], 'fluid'],
+        'div-gpt-bottom-ad'
+      ).addService(googletag.pubads());
 
+      /* 🔥 INITIAL POPUP AD */
+      googletag.defineSlot(
+        '/23113214187/initial-ad',             // initial ad-unit ID
+        [[300, 250], [336, 280], [320, 480], 'fluid'],
+        'div-gpt-initial-ad'
+      ).addService(googletag.pubads());
 
+      googletag.pubads().enableSingleRequest();
+      googletag.enableServices();
+    });
+  </script>
 
-  <!-- ✅ Google Publisher Tag (Unified for all ads) -->
-<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
+   
+
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MBCYCTSLC3"></script>
 <script>
-  window.googletag = window.googletag || {cmd: []};
-  googletag.cmd.push(function() {
-    googletag.defineSlot('/23113214187/480-320', [[480, 320], [300, 600]], 'div-gpt-ad-1763516426621-0').addService(googletag.pubads());
-    googletag.pubads().enableSingleRequest();
-    googletag.enableServices();
-  });
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MBCYCTSLC3');
 </script>
 
   <style>
+    :root {
+      --primary: #003973;
+      --accent: #00bcd4;
+      --light-bg: #ffffff;
+      --dark-text: #212121;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Inter', sans-serif;
-      background: #fff;
-      color: #212121;
-      margin: 0; padding: 0;
-      min-height: 100vh;
+      background: var(--light-bg);
+      color: var(--dark-text);
       display: flex;
       flex-direction: column;
+      min-height: 100vh;
     }
     nav {
-      background: #003973;
+      background: var(--primary);
       padding: 16px 24px;
       color: white;
       font-size: 20px;
       font-weight: 600;
-      text-align: center;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       position: sticky;
       top: 0;
       z-index: 100;
-    }
-    .ad-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 15px 0;
-      margin: 10px auto;
-      max-width: 90%;
     }
     .player-container {
       display: flex;
       flex-direction: column;
       align-items: center;
       padding: 30px 16px;
-      gap: 16px;
-      max-width: 700px;
-      margin: 0 auto;
+      gap: 24px;
     }
-    .status {
-      font-size: 16px;
-      color: #444;
-      text-align: center;
-      min-height: 24px;
-    }
-    .watch-btn {
-      padding: 18px 150px;
-      font-size: 20px;
-      font-weight: 700;
-      color: #fff;
-      background: linear-gradient(45deg, #052481, #0a4eff, #000);
-      background-size: 300% 300%;
-      border: none;
-      border-radius: 50px;
+    .player-box {
+      width: 100%;
+      max-width: 400px;
+      aspect-ratio: 16 / 9;
+      background: #000;
+      border-radius: 12px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(0,0,0,0.15);
       cursor: pointer;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-      transition: 0.35s ease;
     }
-    .watch-btn:hover { transform: scale(1.05); }
+    .player-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: blur(5px);
+      transform: scale(1.05);
+    }
+    .overlay-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      background: rgba(0,0,0,0.6);
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 16px;
+      text-align: center;
+    }
+    section {
+      max-width: 900px;
+      padding: 24px;
+      margin: auto;
+      font-size: 15px;
+      line-height: 1.7;
+      color: #333;
+    }
+    footer {
+      margin-top: auto;
+      text-align: center;
+      padding: 14px;
+      font-size: 13px;
+      color: #888;
+      background: #f0f0f0;
+    }
+    .open-btn {
+      padding: 10px 20px;
+      background: linear-gradient(to right, #00bcd4, #009688);
+      border: none;
+      color: white;
+      font-weight: bold;
+      font-size: 14px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
 
-    /* Interstitial Overlay Styles */
-    #interstitial-wrapper {
-      display: none;
+    /* 🔥 Initial Ad Popup Styles */
+    .initial-ad-overlay {
       position: fixed;
-      top: 0; left: 0;
-      width: 100vw; height: 100vh;
-      background-color: rgba(0,0,0,0.92);
-      z-index: 9999;
+      inset: 0;
+      background: rgba(0,0,0,0.85);
+      display: none;
       justify-content: center;
       align-items: center;
-      overflow: auto;
+      z-index: 9999;
     }
-    .ad-box {
-      background: #000;
-      border-radius: 16px;
-      box-shadow: 0 0 40px rgba(0,0,0,0.8);
+    .initial-ad-modal {
+      width: 90%;
+      max-width: 380px;
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+      text-align: center;
+    }
+    .initial-ad-header {
+      background: #111;
+      color: #fff;
       padding: 8px;
+      font-weight: 600;
+      font-size: 16px;
+      border-radius: 8px;
+      margin-bottom: 12px;
+    }
+
+    /* ✅ Common ad wrapper – ad ko bilkul center me rakhne ke liye */
+    .ad-wrapper {
       display: flex;
       justify-content: center;
       align-items: center;
-      max-width: 95vw;
+      width: 100%;
+      min-height: 250px; /* 300x250, 336x280, 320x480 ke base height */
     }
-    .close-btn {
-      position: fixed;
-      top: 10px; right: 10px;
-      background: red;
-      color: white;
-      font-size: 22px;
-      font-weight: bold;
+
+    #initialAdTimer {
+      margin-top: 10px;
+      font-weight: 600;
+      color: #222;
+      font-size: 14px;
+    }
+    #initialSkipBtn {
+      background: #000;
+      color: #fff;
+      padding: 8px 16px;
+      font-size: 14px;
       border: none;
-      width: 40px; height: 40px;
-      border-radius: 50%;
+      border-radius: 6px;
+      margin-top: 12px;
+      display: none;
       cursor: pointer;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.6);
-      z-index: 10001;
-      display: none;
-      justify-content: center;
-      align-items: center;
     }
-    .close-btn:hover {
-      background: #ff4b4b;
-      transform: scale(1.1);
-    }
-    #closeTimer {
-      position: fixed;
-      top: 15px; right: 60px;
-      font-size: 18px;
-      color: white;
-      font-weight: 700;
-      user-select: none;
-      z-index: 10001;
-      display: none;
-    }
-    @media (max-width: 600px) {
-      .watch-btn {
-        width: 100%;
-        padding: 16px 20px;
-        font-size: 18px;
-      }
+    .code-block-label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #666;
+      margin-top: 10px;
+      margin-bottom: 4px;
     }
   </style>
 </head>
 
 <body>
-  <nav>🎬 Watch Video</nav>
 
+  <!-- 🔺 AD #1 – Navbar ke upar -->
   <center>
-<div class="code-block-label">Advertisements</div>
-
-  <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
-<script>
-  window.googletag = window.googletag || {cmd: []};
-  googletag.cmd.push(function() {
-    googletag.defineSlot('/23113214187/ad-unit-2', [[250, 250], [336, 280], 'fluid', [320, 480]], 'div-gpt-ad-1763516143172-0').addService(googletag.pubads());
-    googletag.pubads().enableSingleRequest();
-    googletag.enableServices();
-  });
-</script>
-
-<!-- /23113214187/ad-unit-2 -->
-<div id='div-gpt-ad-1763516143172-0' style='min-width: 250px; min-height: 250px;'>
-  <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1763516143172-0'); });
-  </script>
-</div>
-</center>
-
-
-
-
-
-
-  <div class="player-container">
-    <div id="statusText" class="status">🎬 वीडियो देखने के लिए बटन दबाएं</div>
-    <button id="watchBtn" class="watch-btn">🎬 Watch Video</button>
-  </div>
-
-
-  
-  <!-- 🔻 Bottom Banner Ad -->
-  
-<center>
-<div class="code-block-label">Advertisements</div>
-  <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
-<script>
-  window.googletag = window.googletag || {cmd: []};
-  googletag.cmd.push(function() {
-    googletag.defineSlot('/23113214187/first-initial-ad', [[250, 250], [320, 480], 'fluid'], 'div-gpt-ad-1763516244573-0').addService(googletag.pubads());
-    googletag.pubads().enableSingleRequest();
-    googletag.enableServices();
-  });
-</script> 
-<!-- /23113214187/first-initial-ad -->
-<div id='div-gpt-ad-1763516244573-0' style='min-width: 250px; min-height: 250px;'>
-  <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1763516244573-0'); });
-  </script>
-</div>
-</center>
-
-
-
-
-
-<div id='div-gpt-ad-1763516426621-0' style='min-width: 300px; min-height: 320px;'>
-  <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1763516426621-0'); });
-  </script>
-</div>
-
-
-
-
-  <!-- 💥 Interstitial (Fullscreen) Overlay Ad -->
-  <div id="interstitial-wrapper">
-    <div class="ad-box">
-      <div id='div-gpt-ad-1763516426621-0' style='min-width: 300px; min-height: 320px;'>
-        <script>googletag.cmd.push(function() { googletag.display('div-gpt-ad-1763516426621-0'); });</script>
+    <div class="code-block-label">Advertisements</div>
+    <div class="ad-wrapper">
+      <div id="div-gpt-top-ad">
+        <script>
+          googletag.cmd.push(function() {
+            googletag.display('div-gpt-top-ad');
+          });
+        </script>
       </div>
+    </div>
+  </center>
+
+  <!-- 🔹 Navbar -->
+  <nav>Watch Video</nav>
+
+  <!-- 🔺 AD #2 – Navbar ke niche -->
+  <center>
+    <div class="code-block-label">Advertisements</div>
+    <div class="ad-wrapper">
+      <div id="div-gpt-mid-ad">
+        <script>
+          googletag.cmd.push(function() {
+            googletag.display('div-gpt-mid-ad');
+          });
+        </script>
+      </div>
+    </div>
+  </center>
+
+  <!-- 🔥 INITIAL POPUP OVERLAY -->
+  <div class="initial-ad-overlay" id="initialAdOverlay">
+    <div class="initial-ad-modal">
+      <div class="initial-ad-header">Advertiser</div>
+
+      <div class="ad-wrapper" style="min-height:250px;">
+        <div id="div-gpt-initial-ad"></div>
+      </div>
+
+      <div id="initialAdTimer">⏳ Wait 6 seconds...</div>
+      <button id="initialSkipBtn">Skip Ad</button>
     </div>
   </div>
 
-  <button class="close-btn" id="closeBtn">×</button>
-  <div id="closeTimer"></div>
+  <!-- 🎥 Player -->
+  <div class="player-container">
+    <div class="player-box" id="playerBox">
+      <img src="img/a1.jpg" alt="Video Thumbnail" />
+      <div class="overlay-text" id="overlayText">▶️ Click to Continue</div>
+    </div>
+  </div>
 
-  <section>
-  <h2 style="color: #00ffd5; font-size: 2rem; margin-bottom: 10px;">
-    💰 Finance & Investment Insights (India + Saudi)
-  </h2>
-  <ol style="line-height:1.8; margin-left:18px; text-align:left;">
-    <li>India’s fintech startups are leading digital payment innovation.</li>
-    <li dir="rtl">تطور التكنولوجيا المالية في السعودية يجعل المعاملات أكثر سهولة.</li>
-    <li>UPI transactions in India have crossed record-breaking volumes.</li>
-    <li dir="rtl">نظام المدفوعات الفورية في السعودية يشبه UPI في الهند.</li>
-    <li>Indian investors are shifting focus toward mutual funds and SIPs.</li>
-    <li dir="rtl">المستثمرون السعوديون يفضلون الصناديق المشتركة طويلة الأمد.</li>
-    <li>Cryptocurrency adoption is rising among Indian youth.</li>
-    <li dir="rtl">اهتمام الشباب السعودي بالأصول الرقمية يتزايد بسرعة.</li>
-    <li>India’s RBI promotes financial literacy across rural regions.</li>
-    <li dir="rtl">البنك المركزي السعودي يعزز الثقافة المالية للمواطنين.</li>
-    <li>Digital wallets are replacing cash in Indian daily life.</li>
-    <li dir="rtl">المحافظ الإلكترونية أصبحت جزءاً أساسياً من حياة السعوديين اليومية.</li>
-    <li>India’s stock market attracts global investors due to rapid growth.</li>
-    <li dir="rtl">سوق الأسهم السعودي يشهد نمواً ملحوظاً بفضل مشاريع رؤية 2030.</li>
-    <li>Insurance penetration is steadily improving in India.</li>
-    <li dir="rtl">قطاع التأمين في السعودية يتوسع بفرص جديدة.</li>
-    <li>Rural microfinance empowers small entrepreneurs in India.</li>
-    <li dir="rtl">برامج التمويل الصغيرة تدعم رواد الأعمال في السعودية.</li>
-    <li>India’s government promotes financial inclusion through Jan Dhan Yojana.</li>
-    <li dir="rtl">برامج السعودية تضمن وصول الخدمات البنكية للجميع.</li>
-    <li>Indian banks are adopting AI to detect fraud and enhance security.</li>
-    <li dir="rtl">البنوك السعودية تستخدم الذكاء الاصطناعي لتحسين الأمان.</li>
-    <li>India’s bond market sees increasing foreign participation.</li>
-    <li dir="rtl">السندات الحكومية السعودية تجذب المستثمرين الأجانب.</li>
-    <li>More Indians are investing in gold ETFs instead of physical gold.</li>
-    <li dir="rtl">الذهب ما زال خياراً رئيسياً للمستثمرين السعوديين.</li>
-    <li>India’s digital rupee pilot project explores CBDC opportunities.</li>
-    <li dir="rtl">الريال الرقمي السعودي قيد الدراسة كعملة رقمية رسمية.</li>
-    <li>Fintech lending platforms are empowering Indian SMEs.</li>
-    <li dir="rtl">المنصات الرقمية تسهل تمويل الشركات الصغيرة في السعودية.</li>
-    <li>India’s millennials prefer investing in the stock market over real estate.</li>
-    <li dir="rtl">الجيل الجديد في السعودية يتجه للاستثمار في الأسهم.</li>
-    <li>Green bonds are gaining traction in India’s sustainable finance sector.</li>
-    <li dir="rtl">السعودية تستثمر في المشاريع الخضراء والتمويل المستدام.</li>
-    <li>India’s mutual fund SIPs cross ₹20,000 crore monthly contributions.</li>
-    <li dir="rtl">الاستثمارات المنتظمة في السعودية تنمو بوتيرة ثابتة.</li>
-    <li>Financial education is now part of Indian school curriculums.</li>
-    <li dir="rtl">التوعية المالية في السعودية تبدأ من المدارس والجامعات.</li>
-    <li>India’s real estate market shows resilience after pandemic recovery.</li>
-    <li dir="rtl">قطاع العقارات السعودي ينتعش بفضل المشاريع الوطنية الكبرى.</li>
-    <li>Indian investors explore REITs for real estate exposure.</li>
-    <li dir="rtl">الصناديق العقارية REITs أصبحت شائعة في السعودية.</li>
-    <li>India-Saudi economic ties are strengthening through mutual trade and investment.</li>
-    <li dir="rtl">العلاقات الاقتصادية بين السعودية والهند تتطور بسرعة.</li>
-    <li>India’s startup ecosystem receives record venture capital inflows.</li>
-    <li dir="rtl">الاستثمار في الشركات الناشئة السعودية يزداد بشكل ملحوظ.</li>
-    <li>Stock market apps simplify trading for India’s new investors.</li>
-    <li dir="rtl">التطبيقات الاستثمارية تجعل التداول سهلاً في السعودية.</li>
-    <li>India’s government supports women entrepreneurs with credit access.</li>
-    <li dir="rtl">السعودية تشجع النساء على ريادة الأعمال والاستثمار.</li>
-    <li>AI and blockchain are shaping India’s future banking systems.</li>
-    <li dir="rtl">الذكاء الاصطناعي وتقنية البلوك تشين يغيران المشهد البنكي السعودي.</li>
-    <li>India’s export sector attracts forex inflows boosting rupee stability.</li>
-    <li dir="rtl">الاستثمارات الأجنبية تعزز الريال السعودي واستقراره.</li>
-    <li>Micro-investing apps make finance accessible to Indian youth.</li>
-    <li dir="rtl">منصات الاستثمار الصغيرة تجذب جيل الشباب السعودي.</li>
-    <li>India’s financial reforms create more transparent tax structures.</li>
-    <li dir="rtl">الإصلاحات الاقتصادية السعودية تعزز الشفافية المالية.</li>
-    <li>Personal finance influencers are reshaping India’s saving habits.</li>
-    <li dir="rtl">المؤثرون الماليون في السعودية ينشرون الوعي بالادخار والاستثمار.</li>
-    <li>India’s banking mergers enhance operational efficiency.</li>
-    <li dir="rtl">الاندماجات البنكية في السعودية تهدف إلى تحسين الكفاءة.</li>
-    <li>India’s young investors are learning algorithmic trading.</li>
-    <li dir="rtl">الجيل الجديد في السعودية يتعلم التداول الآلي.</li>
-    <li>India’s insurance tech startups are disrupting traditional models.</li>
-    <li dir="rtl">شركات التأمين الرقمية السعودية تقدم حلولاً مبتكرة.</li>
-    <li>India’s remittance inflows remain among the world’s highest.</li>
-    <li dir="rtl">التحويلات المالية للسعوديين العاملين بالخارج تساهم في الاقتصاد.</li>
-    <li>Credit card usage is rising among India’s middle-class population.</li>
-    <li dir="rtl">بطاقات الائتمان أصبحت أكثر شيوعاً في السعودية.</li>
-    <li>Digital lending grows fast in India’s tier-2 and tier-3 cities.</li>
-    <li dir="rtl">التمويل الرقمي يصل الآن إلى المدن الصغيرة في السعودية.</li>
-    <li>Financial apps simplify tax filing for Indian freelancers.</li>
-    <li dir="rtl">التطبيقات السعودية تساعد الأفراد في إدارة الضرائب.</li>
-    <li>India’s youth prefer investing through mobile-first platforms.</li>
-    <li dir="rtl">المستثمرون الشباب في السعودية يعتمدون على التطبيقات الذكية.</li>
-    <li>India’s wealth management sector sees digital transformation.</li>
-    <li dir="rtl">إدارة الثروات في السعودية تدخل مرحلة التحول الرقمي.</li>
-    <li>Cross-border investments between India and Saudi Arabia are increasing.</li>
-    <li dir="rtl">الاستثمارات المشتركة بين الهند والسعودية تتوسع بسرعة.</li>
-    <li>India’s GDP growth attracts long-term global investors.</li>
-    <li dir="rtl">النمو الاقتصادي في السعودية يجذب المستثمرين العالميين.</li>
-    <li>India is emerging as a global hub for fintech innovation.</li>
-    <li dir="rtl">السعودية أيضاً تسعى لتصبح مركزاً إقليمياً للتكنولوجيا المالية.</li>
-    <li>Young professionals in India are prioritizing retirement investments early.</li>
-    <li dir="rtl">الجيل السعودي الجديد بدأ الاستثمار للتقاعد في سن مبكرة.</li>
-    <li>India’s investment climate is boosted by regulatory reforms.</li>
-    <li dir="rtl">الإصلاحات التنظيمية في السعودية تعزز بيئة الاستثمار.</li>
-    <li>Fintech partnerships between India and Saudi Arabia are on the rise.</li>
-    <li dir="rtl">التعاون المالي بين البلدين يخلق فرصاً ضخمة للمستقبل.</li>
-  </ol>
-</section>
+  <!-- 🔺 AD #3 – Page ke niche (content ke baad) -->
+  <center>
+    <div class="code-block-label">Advertisements</div>
+    <div class="ad-wrapper">
+      <div id="div-gpt-bottom-ad">
+        <script>
+          googletag.cmd.push(function() {
+            googletag.display('div-gpt-bottom-ad');
+          });
+        </script>
+      </div>
+    </div>
+  </center>
 
-  
-  <footer style="margin-top:auto; text-align:center; padding:20px; background:#f1f1f1; color:#333;">
-    © 2025 TeraboxLinke | <a href="#" style="color:#003973;">Privacy Policy</a>
+  <!-- Content -->
+  <section style="background-color: #181818; color: #f5f5f5; padding: 25px; border-radius: 14px; box-shadow: 0 4px 10px rgba(0,0,0,0.6); font-family: 'Segoe UI', sans-serif;">
+    <h2 style="color: #00ffd5; font-size: 2rem; margin-bottom: 16px;">🎬 Latest 20 Trending Web Series (2025)</h2>
+
+    <div style="font-size:1rem; line-height:1.7;">
+      <p><strong>1️⃣ Mirzapur Season 3</strong> – The power struggle in Mirzapur intensifies as alliances shift and secrets unfold. A perfect blend of suspense, family drama, and revenge makes it a fan favorite.</p>
+      <p><strong>2️⃣ The Family Man Season 3</strong> – Srikant Tiwari returns with new challenges balancing his dual life. The series combines action, humor, and emotion with realistic storytelling.</p>
+      <p><strong>3️⃣ Asur 2</strong> – A thrilling psychological series where mythology meets modern crime investigation. Arshad Warsi and Barun Sobti deliver powerful performances.</p>
+      <p><strong>4️⃣ Panchayat Season 3</strong> – A lighthearted look into rural India, filled with humor, heart, and simplicity. Jitendra Kumar shines again as the lovable secretary of Phulera.</p>
+      <p><strong>5️⃣ Kota Factory Season 3</strong> – An emotional yet inspiring story about students chasing dreams. The realistic portrayal of coaching life continues to impress viewers.</p>
+      <p><strong>6️⃣ Farzi</strong> – A gripping crime drama about an artist who takes on the system. Shahid Kapoor’s OTT debut brings style, emotion, and a sharp social message.</p>
+      <p><strong>7️⃣ The Night Manager 2</strong> – A stylish espionage thriller filled with twists and exotic backdrops. Aditya Roy Kapur and Anil Kapoor deliver top-notch performances.</p>
+      <p><strong>8️⃣ Scam 2003</strong> – Inspired by real-life events, this sequel explores another shocking financial scam in India. The storytelling and direction are absolutely compelling.</p>
+      <p><strong>9️⃣ Made in Heaven Season 2</strong> – A glamorous yet emotional tale about weddings, love, and social issues. The visuals and storytelling are visually stunning and mature.</p>
+      <p><strong>🔟 Taaza Khabar</strong> – A magical realism story that blends humor, emotion, and hope. Bhuvan Bam’s performance adds depth to this unique digital-age tale.</p>
+      <p><strong>1️⃣1️⃣ Aarya Season 3</strong> – Sushmita Sen delivers yet another powerful performance as a mother-turned-warrior. The drama and tension keep audiences glued.</p>
+      <p><strong>1️⃣2️⃣ Bambai Meri Jaan</strong> – A gripping crime drama set in post-independence Mumbai. The series beautifully captures the rise of crime and the fall of morality.</p>
+      <p><strong>1️⃣3️⃣ Guns &amp; Gulaabs</strong> – A quirky crime comedy with retro vibes. Rajkummar Rao and Dulquer Salmaan bring humor and chaos to the world of small-town gangsters.</p>
+      <p><strong>1️⃣4️⃣ Dahaad</strong> – A slow-burn crime thriller featuring Sonakshi Sinha as a strong female cop. Smartly written, intense, and realistic in its approach.</p>
+      <p><strong>1️⃣5️⃣ Jubilee</strong> – A period drama set in the golden era of Indian cinema. With stunning visuals and soulful performances, it’s a treat for film lovers.</p>
+      <p><strong>1️⃣6️⃣ Inspector Avinash</strong> – Based on true events, this cop drama showcases courage and integrity. Randeep Hooda’s performance makes it thrilling and inspiring.</p>
+      <p><strong>1️⃣7️⃣ Broken But Beautiful 4</strong> – A heartfelt romantic drama that explores love, heartbreak, and healing. Emotional storytelling with soothing music.</p>
+      <p><strong>1️⃣8️⃣ Shehar Lakhot</strong> – A dark yet stylish series filled with mysteries and small-town secrets. It’s cinematic, unpredictable, and emotionally gripping.</p>
+      <p><strong>1️⃣9️⃣ The Freelancer</strong> – A high-octane rescue mission thriller set across global locations. Mohit Raina’s intense role keeps viewers on the edge.</p>
+      <p><strong>2️⃣0️⃣ Adhura</strong> – A supernatural suspense series with a deep emotional core. It blends horror, mystery, and human emotions in a subtle, engaging way.</p>
+    </div>
+
+    <p style="font-size: 0.95rem; color: #aaaaaa; margin-top: 20px;">
+      ⚠️ Note: All descriptions are for informational and entertainment purposes only. These web series are available on official streaming platforms and follow content guidelines suitable for general audiences.
+    </p>
+  </section>
+
+  <p style="text-align:center; color: #555;">⚠️ Tap the video player to watch an initial ad, then skip and continue to video.</p>
+
+  <footer>
+    © 2025 TeraboxLinke |
+    <a href="#" style="color: var(--primary); text-decoration: none;">Privacy Policy</a>
   </footer>
 
   <script>
-    const watchBtn = document.getElementById('watchBtn');
-    const statusText = document.getElementById('statusText');
-    const interstitial = document.getElementById('interstitial-wrapper');
-    const closeBtn = document.getElementById('closeBtn');
-    const closeTimer = document.getElementById('closeTimer');
+    document.addEventListener("DOMContentLoaded", () => {
+      const playerBox = document.getElementById('playerBox');
+      const overlay = document.getElementById('overlayText');
 
-    function getVideoId() {
-      const path = window.location.pathname;
-      const m = path.match(/\/k\/([^/?#]+)/i);
-      if (m && m[1]) return m[1];
-      const segs = path.split('/').filter(Boolean);
-      return segs.length ? segs[segs.length - 1] : 'demo123';
-    }
+      const initialAdOverlay = document.getElementById('initialAdOverlay');
+      const initialAdTimer = document.getElementById('initialAdTimer');
+      const initialSkipBtn = document.getElementById('initialSkipBtn');
 
-    watchBtn.addEventListener('click', () => {
-      interstitial.style.display = 'flex';
-      document.body.style.overflow = 'hidden';
-      closeBtn.style.display = 'none';
-      closeTimer.style.display = 'block';
+      let countdown = 6;
+      let intervalId = null;
+      let adShown = false;
 
-      let countdown = 5;
-      closeTimer.textContent = `${countdown} s`;
-      statusText.textContent = `⏳ कृपया इंतजार करें... ${countdown} सेकंड में बंद करें`;
+      // Original Terabox link
+      let pathSegments = window.location.pathname.split('/').filter(Boolean);
+      let videoID = pathSegments.length ? pathSegments[pathSegments.length - 1] : "demo123";
+      const originalLink = `https://1024terabox.com/s/${videoID}`;
 
-      const timer = setInterval(() => {
-        countdown--;
-        if (countdown > 0) {
-          closeTimer.textContent = `${countdown} s`;
-          statusText.textContent = `⏳ कृपया इंतजार करें... ${countdown} सेकंड में बंद करें`;
-        } else {
-          clearInterval(timer);
-          closeTimer.style.display = 'none';
-          closeBtn.style.display = 'flex';
-          statusText.textContent = '👉 Ad देख कर continue करें';
+      function startInitialAd() {
+        if (adShown) return; // sirf ek baar
+        adShown = true;
+
+        initialAdOverlay.style.display = 'flex';
+        overlay.textContent = '⏳ Loading Ad...';
+
+        countdown = 6;
+        initialAdTimer.style.display = 'block';
+        initialSkipBtn.style.display = 'none';
+        initialAdTimer.textContent = `⏳ Wait ${countdown} seconds...`;
+
+        // Display initial ad
+        if (window.googletag) {
+          googletag.cmd.push(function() {
+            googletag.display('div-gpt-initial-ad');
+          });
         }
-      }, 1000);
-    });
 
-    closeBtn.addEventListener('click', () => {
-      interstitial.style.display = 'none';
-      document.body.style.overflow = 'auto';
-      closeBtn.style.display = 'none';
-      closeTimer.style.display = 'none';
-      statusText.textContent = '✅ वीडियो खुल रहा है...';
+        intervalId = setInterval(() => {
+          countdown--;
+          if (countdown > 0) {
+            initialAdTimer.textContent = `⏳ Wait ${countdown} seconds...`;
+          } else {
+            clearInterval(intervalId);
+            initialAdTimer.style.display = 'none';
+            initialSkipBtn.style.display = 'inline-block';
+          }
+        }, 1000);
+      }
 
-      const videoID = getVideoId();
-      window.location.href = `https://www.cybernewhub.com/al/${videoID}`;
+      // Click on player box -> show initial ad popup
+      playerBox.addEventListener('click', () => {
+        startInitialAd();
+      });
+
+      // Skip button -> redirect to original link
+      initialSkipBtn.addEventListener('click', () => {
+        window.location.href = originalLink;
+      });
     });
   </script>
 </body>
-</html> isme ad plasemant sahi karna hai
+</html>

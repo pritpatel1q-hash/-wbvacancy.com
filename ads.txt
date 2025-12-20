@@ -1,5 +1,2 @@
-
-google.com, pub-6570505427176391, DIRECT, f08c47fec0942fa0
-google.com, pub-1753534350831011, DIRECT, f08c47fec0942fa0
-
-https://srv.adstxtmanager.com/19390/staela.net
+google.com, pub-9399200858100513, DIRECT, f08c47fec0942fa0
+google.com, pub-6132977604586696, DIRECT, f08c47fec0942fa0

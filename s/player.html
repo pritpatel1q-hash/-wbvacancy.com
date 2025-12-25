@@ -24,32 +24,32 @@
     window.googletag = window.googletag || {cmd: []};
 
     googletag.cmd.push(function() {
-      /* 🔺 TOP BANNER (navbar ke upar) */
+      /* 🔺 TOP AD - Navbar ke upar */
       googletag.defineSlot(
-        '/23113214187/7-november-top-ad',
-        [[336, 280], [300, 250], 'fluid', [320, 480]],
-        'div-gpt-top-ad'
+        '/23208283074/first-ad-unit',
+        [[250, 360], 'fluid', [336, 280], [320, 480]],
+        'div-gpt-ad-1766670980677-0'
       ).addService(googletag.pubads());
 
-      /* 🔻 MID PAGE (navbar ke niche) */
+      /* 🔻 MID AD - Navbar ke niche */
       googletag.defineSlot(
-        '/23113214187/ad-unit-2',
-        [[250, 250], [336, 280], 'fluid', [320, 480]],
-        'div-gpt-mid-ad'
+        '/23208283074/secunt-ad-unit',
+        [[336, 280], 'fluid', [250, 360], [320, 480]],
+        'div-gpt-ad-1766671081108-0'
       ).addService(googletag.pubads());
 
-      /* 🔻 BOTTOM PAGE (page ke niche) */
+      /* 🔻 BOTTOM AD - Player ke niche */
       googletag.defineSlot(
-        '/23113214187/first-initial-ad',
-        [[250, 250], [320, 480], 'fluid'],
-        'div-gpt-bottom-ad'
+        '/23208283074/thrd-ad',
+        [[336, 280], 'fluid', [320, 480], [480, 320]],
+        'div-gpt-ad-1766671149138-0'
       ).addService(googletag.pubads());
 
       /* 🔥 INITIAL POPUP AD */
       googletag.defineSlot(
-        '/23113214187/initial-ad',             // initial ad-unit ID
-        [[300, 250], [336, 280], [320, 480], 'fluid'],
-        'div-gpt-initial-ad'
+        '/23208283074/initialy-ad',
+        ['fluid', [250, 250], [320, 480]],
+        'div-gpt-ad-1766671255926-0'
       ).addService(googletag.pubads());
 
       googletag.pubads().enableSingleRequest();
@@ -70,50 +70,107 @@
 </script>
 
   <style>
-    :root {
-      --primary: #003973;
-      --accent: #00bcd4;
-      --light-bg: #ffffff;
-      --dark-text: #212121;
-    }
     * { margin: 0; padding: 0; box-sizing: border-box; }
+    
     body {
       font-family: 'Inter', sans-serif;
-      background: var(--light-bg);
-      color: var(--dark-text);
+      background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 50%, #90CAF9 100%);
+      background-attachment: fixed;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
-      min-height: 100vh;
     }
+
     nav {
-      background: var(--primary);
-      padding: 16px 24px;
+      background: linear-gradient(135deg, #0D47A1 0%, #1565C0 50%, #1976D2 100%);
+      padding: 20px 32px;
       color: white;
-      font-size: 20px;
-      font-weight: 600;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      position: sticky;
-      top: 0;
+      font-size: 24px;
+      font-weight: 700;
+      box-shadow: 0 8px 25px rgba(13, 71, 161, 0.4), 
+                  0 2px 10px rgba(0, 0, 0, 0.2),
+                  inset 0 1px 0 rgba(255, 255, 255, 0.2);
+      position: relative;
+      left: 0;
+      right: 0;
       z-index: 100;
+      text-align: center;
+      width: 100%;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      letter-spacing: 1px;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
     }
+
+    nav::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, 
+        rgba(255, 255, 255, 0.4) 0%, 
+        rgba(255, 255, 255, 0.6) 50%, 
+        rgba(255, 255, 255, 0.4) 100%);
+    }
+
     .player-container {
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 30px 16px;
-      gap: 24px;
+      padding: 12px;
+      width: 100%;
+      max-width: 500px;
+      margin: 20px auto;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-radius: 16px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.15);
     }
+
+    .user-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 0;
+      width: 100%;
+      margin-bottom: 10px;
+      border-bottom: 2px solid rgba(13, 71, 161, 0.1);
+    }
+
+    .user-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #0D47A1 0%, #1565C0 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+      box-shadow: 0 2px 8px rgba(13, 71, 161, 0.3);
+    }
+
+    .user-text {
+      font-size: 18px;
+      font-weight: 600;
+      color: #0D47A1;
+    }
+
     .player-box {
       width: 100%;
-      max-width: 400px;
       aspect-ratio: 16 / 9;
-      background: #000;
-      border-radius: 12px;
+      background: #000000;
+      border-radius: 10px;
       position: relative;
       overflow: hidden;
-      box-shadow: 0 0 20px rgba(0,0,0,0.15);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.25);
       cursor: pointer;
+      border: 2px solid #000;
     }
+
     .player-box img {
       width: 100%;
       height: 100%;
@@ -121,218 +178,780 @@
       filter: blur(5px);
       transform: scale(1.05);
     }
+
     .overlay-text {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       color: white;
-      background: rgba(0,0,0,0.6);
-      padding: 12px 24px;
-      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      padding: 16px 32px;
+      border-radius: 12px;
       font-weight: bold;
-      font-size: 16px;
+      font-size: 18px;
       text-align: center;
-    }
-    section {
-      max-width: 900px;
-      padding: 24px;
-      margin: auto;
-      font-size: 15px;
-      line-height: 1.7;
-      color: #333;
-    }
-    footer {
-      margin-top: auto;
-      text-align: center;
-      padding: 14px;
-      font-size: 13px;
-      color: #888;
-      background: #f0f0f0;
-    }
-    .open-btn {
-      padding: 10px 20px;
-      background: linear-gradient(to right, #00bcd4, #009688);
-      border: none;
-      color: white;
-      font-weight: bold;
-      font-size: 14px;
-      border-radius: 8px;
-      cursor: pointer;
+      border: 2px solid rgba(255, 255, 255, 0.5);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      z-index: 2;
     }
 
-    /* 🔥 Initial Ad Popup Styles */
+    /* 🔥 Initial Ad Popup Styles - Premium */
     .initial-ad-overlay {
       position: fixed;
       inset: 0;
-      background: rgba(0,0,0,0.85);
+      background: rgba(0,0,0,0.92);
+      backdrop-filter: blur(8px);
       display: none;
       justify-content: center;
       align-items: center;
       z-index: 9999;
-    }
-    .initial-ad-modal {
-      width: 90%;
-      max-width: 380px;
-      background: #ffffff;
-      border-radius: 14px;
-      padding: 16px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-      text-align: center;
-    }
-    .initial-ad-header {
-      background: #111;
-      color: #fff;
-      padding: 8px;
-      font-weight: 600;
-      font-size: 16px;
-      border-radius: 8px;
-      margin-bottom: 12px;
+      animation: fadeInOverlay 0.3s ease;
     }
 
-    /* ✅ Common ad wrapper – ad ko bilkul center me rakhne ke liye */
-    .ad-wrapper {
+    @keyframes fadeInOverlay {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .initial-ad-modal {
+      width: 90%;
+      max-width: 400px;
+      background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 50%, #ffffff 100%);
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5), 
+                  0 0 0 3px rgba(13, 71, 161, 0.3),
+                  inset 0 1px 0 rgba(255,255,255,0.8);
+      text-align: center;
+      border: 2px solid #0D47A1;
+      animation: slideUpModal 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .initial-ad-modal::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(13, 71, 161, 0.1), transparent);
+      animation: shimmer 3s infinite;
+    }
+
+    @keyframes slideUpModal {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes shimmer {
+      0% { left: -100%; }
+      100% { left: 100%; }
+    }
+
+    .initial-ad-header {
+      background: linear-gradient(135deg, #0D47A1 0%, #1565C0 100%);
+      color: white;
+      padding: 12px 16px;
+      font-weight: 700;
+      font-size: 18px;
+      border-radius: 12px;
+      margin-bottom: 16px;
+      box-shadow: 0 4px 12px rgba(13, 71, 161, 0.4);
+      text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      letter-spacing: 0.5px;
+    }
+
+    /* ✅ Initial popup ad wrapper - Premium */
+    .initial-ad-wrapper {
       display: flex;
       justify-content: center;
       align-items: center;
       width: 100%;
-      min-height: 250px; /* 300x250, 336x280, 320x480 ke base height */
+      min-height: 250px;
+      background: rgba(13, 71, 161, 0.05);
+      border-radius: 12px;
+      border: 2px dashed rgba(13, 71, 161, 0.2);
+      padding: 8px;
     }
 
     #initialAdTimer {
-      margin-top: 10px;
+      margin-top: 16px;
       font-weight: 600;
-      color: #222;
-      font-size: 14px;
+      color: #0D47A1;
+      font-size: 16px;
+      padding: 10px 20px;
+      background: rgba(13, 71, 161, 0.1);
+      border-radius: 10px;
+      display: inline-block;
+      border: 1px solid rgba(13, 71, 161, 0.2);
     }
     #initialSkipBtn {
-      background: #000;
+      background: linear-gradient(135deg, #0D47A1 0%, #1565C0 100%);
       color: #fff;
-      padding: 8px 16px;
-      font-size: 14px;
+      padding: 12px 28px;
+      font-size: 16px;
+      font-weight: 600;
       border: none;
-      border-radius: 6px;
-      margin-top: 12px;
+      border-radius: 12px;
+      margin-top: 16px;
       display: none;
       cursor: pointer;
-    }
-    .code-block-label {
-      font-size: 12px;
+      box-shadow: 0 4px 15px rgba(13, 71, 161, 0.4);
+      transition: all 0.3s ease;
       text-transform: uppercase;
       letter-spacing: 1px;
-      color: #666;
-      margin-top: 10px;
+      position: relative;
+      overflow: hidden;
+    }
+    #initialSkipBtn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+      transition: left 0.5s;
+    }
+    #initialSkipBtn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(13, 71, 161, 0.6);
+    }
+    #initialSkipBtn:hover::before {
+      left: 100%;
+    }
+    #initialSkipBtn:active {
+      transform: translateY(-1px);
+    }
+
+    /* ✅ Top Ad Wrapper - Navbar ke upar */
+    .top-ad-wrapper {
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
+      padding: 10px;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-radius: 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      border-bottom: 2px solid rgba(13, 71, 161, 0.2);
+    }
+
+    .ad-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #1565C0;
+      margin-bottom: 6px;
+      font-weight: 600;
+      opacity: 0.8;
+    }
+
+    .top-ad-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 280px;
+      width: 100%;
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 0;
+    }
+
+    /* ✅ Mid Ad Wrapper - Navbar ke niche */
+    .mid-ad-wrapper {
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
+      padding: 10px;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-radius: 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      border-bottom: 2px solid rgba(13, 71, 161, 0.2);
+    }
+
+    .mid-ad-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 280px;
+      width: 100%;
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 0;
+    }
+
+    /* ✅ Bottom Ad Wrapper - Player ke niche */
+    .bottom-ad-wrapper {
+      width: 100%;
+      max-width: 500px;
+      margin: 20px auto;
+      padding: 10px;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .bottom-ad-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 280px;
+      width: 100%;
+      padding: 0;
+    }
+
+    /* 🎮 Gaming Section */
+    .gaming-section {
+      width: 100%;
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 18px;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-radius: 16px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+    }
+
+    .gaming-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #0D47A1;
+      margin-bottom: 16px;
+      text-align: center;
+      padding-bottom: 12px;
+      border-bottom: 2px solid rgba(13, 71, 161, 0.2);
+    }
+
+    .gaming-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .game-box {
+      background: #000;
+      border-radius: 12px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: 2px solid rgba(13, 71, 161, 0.2);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      position: relative;
+      aspect-ratio: 1;
+    }
+
+    .game-box:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 20px rgba(13, 71, 161, 0.3);
+      border-color: #0D47A1;
+    }
+
+    .game-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .game-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, transparent 100%);
+      padding: 12px;
+      color: white;
+    }
+
+    .game-name {
+      font-size: 14px;
+      font-weight: 600;
+      color: white;
       margin-bottom: 4px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    }
+
+    .game-category {
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.9);
+      text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+    }
+
+    .game-box.hidden {
+      display: none;
+    }
+
+    .view-more-btn {
+      width: 100%;
+      padding: 14px;
+      margin-top: 16px;
+      background: linear-gradient(135deg, #0D47A1 0%, #1565C0 100%);
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(13, 71, 161, 0.3);
+    }
+
+    .view-more-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(13, 71, 161, 0.4);
+    }
+
+    .view-more-btn:active {
+      transform: translateY(0);
+    }
+
+    @media (max-width: 600px) {
+      .gaming-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+      }
+      
+      .game-overlay {
+        padding: 8px;
+      }
+      
+      .game-name {
+        font-size: 11px;
+      }
+      
+      .game-category {
+        font-size: 9px;
+      }
+    }
+
+    /* 📝 Gaming Content Section */
+    .gaming-content-section {
+      width: 100%;
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 24px;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-radius: 16px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+    }
+
+    .gaming-content-title {
+      font-size: 24px;
+      font-weight: 700;
+      color: #0D47A1;
+      margin-bottom: 20px;
+      text-align: center;
+      padding-bottom: 16px;
+      border-bottom: 3px solid rgba(13, 71, 161, 0.2);
+      text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .gaming-content-text {
+      font-size: 15px;
+      line-height: 1.8;
+      color: #1E3A5F;
+      text-align: justify;
+    }
+
+    .gaming-content-text p {
+      margin-bottom: 16px;
+    }
+
+    .gaming-content-text strong {
+      color: #0D47A1;
+      font-weight: 600;
+    }
+
+    .gaming-content-text h3 {
+      color: #1565C0;
+      font-size: 18px;
+      margin-top: 24px;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    /* 🦶 Footer */
+    footer {
+      width: 100%;
+      max-width: 600px;
+      margin: 30px auto 20px;
+      padding: 24px;
+      background: linear-gradient(135deg, #0D47A1 0%, #1565C0 100%);
+      border-radius: 16px;
+      box-shadow: 0 8px 30px rgba(13, 71, 161, 0.3);
+      text-align: center;
+      color: white;
+    }
+
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 8px;
+    }
+
+    .footer-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 8px 16px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .footer-links a:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateY(-2px);
+    }
+
+    .footer-copyright {
+      font-size: 13px;
+      opacity: 0.9;
+      margin-top: 12px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    @media (max-width: 600px) {
+      .initial-ad-modal {
+        max-width: 95%;
+        padding: 20px;
+      }
+
+      .initial-ad-wrapper {
+        min-height: 250px;
+      }
+
+      .initial-ad-header {
+        font-size: 16px;
+        padding: 10px 14px;
+      }
+
+      #initialAdTimer {
+        font-size: 14px;
+        padding: 8px 16px;
+      }
+
+      #initialSkipBtn {
+        padding: 10px 24px;
+        font-size: 14px;
+      }
+
+      .gaming-content-section {
+        padding: 20px;
+      }
+
+      .gaming-content-title {
+        font-size: 20px;
+      }
+
+      .gaming-content-text {
+        font-size: 14px;
+      }
+
+      .footer-links {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .footer-links a {
+        width: 100%;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <!-- 🔺 AD #1 – Navbar ke upar -->
-  <center>
-    <div class="code-block-label">Advertisements</div>
-    <div class="ad-wrapper">
-      <div id="div-gpt-top-ad">
+  <!-- 🔺 Top Ad - Navbar ke upar -->
+  <div class="top-ad-wrapper">
+    <div class="ad-label">Advertisement</div>
+    <div class="top-ad-container">
+      <div id='div-gpt-ad-1766670980677-0' style='min-width: 250px; min-height: 280px;'>
         <script>
-          googletag.cmd.push(function() {
-            googletag.display('div-gpt-top-ad');
-          });
+          googletag.cmd.push(function() { googletag.display('div-gpt-ad-1766670980677-0'); });
         </script>
       </div>
     </div>
-  </center>
+  </div>
 
   <!-- 🔹 Navbar -->
   <nav>Watch Video</nav>
 
-  <!-- 🔺 AD #2 – Navbar ke niche -->
-  <center>
-    <div class="code-block-label">Advertisements</div>
-    <div class="ad-wrapper">
-      <div id="div-gpt-mid-ad">
+  <!-- 🔻 Mid Ad - Navbar ke niche -->
+  <div class="mid-ad-wrapper">
+    <div class="ad-label">Advertisement</div>
+    <div class="mid-ad-container">
+      <div id='div-gpt-ad-1766671081108-0' style='min-width: 250px; min-height: 280px;'>
         <script>
-          googletag.cmd.push(function() {
-            googletag.display('div-gpt-mid-ad');
-          });
+          googletag.cmd.push(function() { googletag.display('div-gpt-ad-1766671081108-0'); });
         </script>
       </div>
     </div>
-  </center>
+  </div>
 
   <!-- 🔥 INITIAL POPUP OVERLAY -->
   <div class="initial-ad-overlay" id="initialAdOverlay">
     <div class="initial-ad-modal">
-      <div class="initial-ad-header">Advertiser</div>
+      <div class="initial-ad-header">✨ Premium Advertisement ✨</div>
 
-      <div class="ad-wrapper" style="min-height:250px;">
-        <div id="div-gpt-initial-ad"></div>
+      <div class="initial-ad-wrapper">
+        <div id='div-gpt-ad-1766671255926-0' style='min-width: 250px; min-height: 250px;'>
+          <script>
+            googletag.cmd.push(function() { googletag.display('div-gpt-ad-1766671255926-0'); });
+          </script>
+        </div>
       </div>
 
-      <div id="initialAdTimer">⏳ Wait 6 seconds...</div>
-      <button id="initialSkipBtn">Skip Ad</button>
+      <div id="initialAdTimer">⏳ Please wait 5 seconds...</div>
+      <button id="initialSkipBtn">Skip Ad →</button>
     </div>
   </div>
 
-  <!-- 🎥 Player -->
+  <!-- 🎥 Player Container (with User Header) -->
   <div class="player-container">
+    <!-- 👤 User Header -->
+    <div class="user-header">
+      <div class="user-icon">👤</div>
+      <div class="user-text">User Video</div>
+    </div>
+
+    <!-- 🎥 Player -->
     <div class="player-box" id="playerBox">
       <img src="img/a1.jpg" alt="Video Thumbnail" />
       <div class="overlay-text" id="overlayText">▶️ Click to Continue</div>
     </div>
   </div>
 
-  <!-- 🔺 AD #3 – Page ke niche (content ke baad) -->
-  <center>
-    <div class="code-block-label">Advertisements</div>
-    <div class="ad-wrapper">
-      <div id="div-gpt-bottom-ad">
+  <!-- 🔻 Bottom Ad - Player ke niche -->
+  <div class="bottom-ad-wrapper">
+    <div class="ad-label">Advertisement</div>
+    <div class="bottom-ad-container">
+      <div id='div-gpt-ad-1766671149138-0' style='min-width: 320px; min-height: 280px;'>
         <script>
-          googletag.cmd.push(function() {
-            googletag.display('div-gpt-bottom-ad');
-          });
+          googletag.cmd.push(function() { googletag.display('div-gpt-ad-1766671149138-0'); });
         </script>
       </div>
     </div>
-  </center>
+  </div>
 
-  <!-- Content -->
-  <section style="background-color: #181818; color: #f5f5f5; padding: 25px; border-radius: 14px; box-shadow: 0 4px 10px rgba(0,0,0,0.6); font-family: 'Segoe UI', sans-serif;">
-    <h2 style="color: #00ffd5; font-size: 2rem; margin-bottom: 16px;">🎬 Latest 20 Trending Web Series (2025)</h2>
-
-    <div style="font-size:1rem; line-height:1.7;">
-      <p><strong>1️⃣ Mirzapur Season 3</strong> – The power struggle in Mirzapur intensifies as alliances shift and secrets unfold. A perfect blend of suspense, family drama, and revenge makes it a fan favorite.</p>
-      <p><strong>2️⃣ The Family Man Season 3</strong> – Srikant Tiwari returns with new challenges balancing his dual life. The series combines action, humor, and emotion with realistic storytelling.</p>
-      <p><strong>3️⃣ Asur 2</strong> – A thrilling psychological series where mythology meets modern crime investigation. Arshad Warsi and Barun Sobti deliver powerful performances.</p>
-      <p><strong>4️⃣ Panchayat Season 3</strong> – A lighthearted look into rural India, filled with humor, heart, and simplicity. Jitendra Kumar shines again as the lovable secretary of Phulera.</p>
-      <p><strong>5️⃣ Kota Factory Season 3</strong> – An emotional yet inspiring story about students chasing dreams. The realistic portrayal of coaching life continues to impress viewers.</p>
-      <p><strong>6️⃣ Farzi</strong> – A gripping crime drama about an artist who takes on the system. Shahid Kapoor’s OTT debut brings style, emotion, and a sharp social message.</p>
-      <p><strong>7️⃣ The Night Manager 2</strong> – A stylish espionage thriller filled with twists and exotic backdrops. Aditya Roy Kapur and Anil Kapoor deliver top-notch performances.</p>
-      <p><strong>8️⃣ Scam 2003</strong> – Inspired by real-life events, this sequel explores another shocking financial scam in India. The storytelling and direction are absolutely compelling.</p>
-      <p><strong>9️⃣ Made in Heaven Season 2</strong> – A glamorous yet emotional tale about weddings, love, and social issues. The visuals and storytelling are visually stunning and mature.</p>
-      <p><strong>🔟 Taaza Khabar</strong> – A magical realism story that blends humor, emotion, and hope. Bhuvan Bam’s performance adds depth to this unique digital-age tale.</p>
-      <p><strong>1️⃣1️⃣ Aarya Season 3</strong> – Sushmita Sen delivers yet another powerful performance as a mother-turned-warrior. The drama and tension keep audiences glued.</p>
-      <p><strong>1️⃣2️⃣ Bambai Meri Jaan</strong> – A gripping crime drama set in post-independence Mumbai. The series beautifully captures the rise of crime and the fall of morality.</p>
-      <p><strong>1️⃣3️⃣ Guns &amp; Gulaabs</strong> – A quirky crime comedy with retro vibes. Rajkummar Rao and Dulquer Salmaan bring humor and chaos to the world of small-town gangsters.</p>
-      <p><strong>1️⃣4️⃣ Dahaad</strong> – A slow-burn crime thriller featuring Sonakshi Sinha as a strong female cop. Smartly written, intense, and realistic in its approach.</p>
-      <p><strong>1️⃣5️⃣ Jubilee</strong> – A period drama set in the golden era of Indian cinema. With stunning visuals and soulful performances, it’s a treat for film lovers.</p>
-      <p><strong>1️⃣6️⃣ Inspector Avinash</strong> – Based on true events, this cop drama showcases courage and integrity. Randeep Hooda’s performance makes it thrilling and inspiring.</p>
-      <p><strong>1️⃣7️⃣ Broken But Beautiful 4</strong> – A heartfelt romantic drama that explores love, heartbreak, and healing. Emotional storytelling with soothing music.</p>
-      <p><strong>1️⃣8️⃣ Shehar Lakhot</strong> – A dark yet stylish series filled with mysteries and small-town secrets. It’s cinematic, unpredictable, and emotionally gripping.</p>
-      <p><strong>1️⃣9️⃣ The Freelancer</strong> – A high-octane rescue mission thriller set across global locations. Mohit Raina’s intense role keeps viewers on the edge.</p>
-      <p><strong>2️⃣0️⃣ Adhura</strong> – A supernatural suspense series with a deep emotional core. It blends horror, mystery, and human emotions in a subtle, engaging way.</p>
+  <!-- 🎮 Gaming Section -->
+  <div class="gaming-section">
+    <div class="gaming-title">🎮 Popular Games</div>
+    <div class="gaming-grid">
+      <div class="game-box">
+        <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=300&h=300&fit=crop" alt="Action Game" class="game-image" />
+        <div class="game-overlay">
+          <div class="game-name">Action Game</div>
+          <div class="game-category">Adventure</div>
+        </div>
+      </div>
+      <div class="game-box">
+        <img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=300&h=300&fit=crop" alt="Racing" class="game-image" />
+        <div class="game-overlay">
+          <div class="game-name">Racing</div>
+          <div class="game-category">Speed</div>
+        </div>
+      </div>
+      <div class="game-box">
+        <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=300&h=300&fit=crop" alt="Sports" class="game-image" />
+        <div class="game-overlay">
+          <div class="game-name">Sports</div>
+          <div class="game-category">Football</div>
+        </div>
+      </div>
+      <div class="game-box">
+        <img src="https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?w=300&h=300&fit=crop" alt="Puzzle" class="game-image" />
+        <div class="game-overlay">
+          <div class="game-name">Puzzle</div>
+          <div class="game-category">Brain</div>
+        </div>
+      </div>
+      <div class="game-box">
+        <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=300&h=300&fit=crop" alt="Arcade" class="game-image" />
+        <div class="game-overlay">
+          <div class="game-name">Arcade</div>
+          <div class="game-category">Classic</div>
+        </div>
+      </div>
+      <div class="game-box">
+        <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?w=300&h=300&fit=crop" alt="Basketball" class="game-image" />
+        <div class="game-overlay">
+          <div class="game-name">Basketball</div>
+          <div class="game-category">Sports</div>
+        </div>
+      </div>
+      <div class="game-box">
+        <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=300&h=300&fit=crop" alt="Shooting" class="game-image" />
+        <div class="game-overlay">
+          <div class="game-name">Shooting</div>
+          <div class="game-category">Action</div>
+        </div>
+      </div>
+      <div class="game-box">
+        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&h=300&fit=crop" alt="Strategy" class="game-image" />
+        <div class="game-overlay">
+          <div class="game-name">Strategy</div>
+          <div class="game-category">Tactical</div>
+        </div>
+      </div>
+      <div class="game-box">
+        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&h=300&fit=crop" alt="Fighting" class="game-image" />
+        <div class="game-overlay">
+          <div class="game-name">Fighting</div>
+          <div class="game-category">Combat</div>
+        </div>
+      </div>
+      <div class="game-box">
+        <img src="https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?w=300&h=300&fit=crop" alt="Card Game" class="game-image" />
+        <div class="game-overlay">
+          <div class="game-name">Card Game</div>
+          <div class="game-category">Casual</div>
+        </div>
+      </div>
+      <div class="game-box hidden">
+        <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=300&h=300&fit=crop" alt="RPG" class="game-image" />
+        <div class="game-overlay">
+          <div class="game-name">RPG</div>
+          <div class="game-category">Role Play</div>
+        </div>
+      </div>
+      <div class="game-box hidden">
+        <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=300&h=300&fit=crop" alt="Tennis" class="game-image" />
+        <div class="game-overlay">
+          <div class="game-name">Tennis</div>
+          <div class="game-category">Sports</div>
+        </div>
+      </div>
+      <div class="game-box hidden">
+        <img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=300&h=300&fit=crop" alt="Cricket" class="game-image" />
+        <div class="game-overlay">
+          <div class="game-name">Cricket</div>
+          <div class="game-category">Sports</div>
+        </div>
+      </div>
+      <div class="game-box hidden">
+        <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=300&h=300&fit=crop" alt="Volleyball" class="game-image" />
+        <div class="game-overlay">
+          <div class="game-name">Volleyball</div>
+          <div class="game-category">Sports</div>
+        </div>
+      </div>
+      <div class="game-box hidden">
+        <img src="https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?w=300&h=300&fit=crop" alt="Chess" class="game-image" />
+        <div class="game-overlay">
+          <div class="game-name">Chess</div>
+          <div class="game-category">Strategy</div>
+        </div>
+      </div>
+      <div class="game-box hidden">
+        <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=300&h=300&fit=crop" alt="Soccer" class="game-image" />
+        <div class="game-overlay">
+          <div class="game-name">Soccer</div>
+          <div class="game-category">Sports</div>
+        </div>
+      </div>
     </div>
+    <button class="view-more-btn" id="viewMoreBtn">View More Games</button>
+  </div>
 
-    <p style="font-size: 0.95rem; color: #aaaaaa; margin-top: 20px;">
-      ⚠️ Note: All descriptions are for informational and entertainment purposes only. These web series are available on official streaming platforms and follow content guidelines suitable for general audiences.
-    </p>
-  </section>
+  <!-- 📝 Gaming Content Section -->
+  <div class="gaming-content-section">
+    <div class="gaming-content-title">🎮 Gaming Content</div>
+    <div class="gaming-content-text">
+      <p><strong>Gaming Industry Overview:</strong> The gaming industry has evolved into one of the most dynamic and profitable sectors in the entertainment world. With technological advancements, gaming has transformed from simple pixelated graphics to photorealistic experiences that blur the line between reality and virtual worlds.</p>
 
-  <p style="text-align:center; color: #555;">⚠️ Tap the video player to watch an initial ad, then skip and continue to video.</p>
+      <h3>Evolution of Gaming Technology</h3>
+      <p>The journey of gaming technology began with arcade machines in the 1970s, progressed through home consoles, and now encompasses mobile gaming, cloud gaming, and virtual reality. Each era brought innovations that reshaped how we interact with digital entertainment.</p>
 
+      <p><strong>Console Gaming:</strong> Major players like PlayStation, Xbox, and Nintendo have continuously pushed boundaries with powerful hardware, exclusive titles, and online multiplayer capabilities. The latest generation consoles support 4K resolution, ray tracing, and 120fps gameplay.</p>
+
+      <p><strong>PC Gaming:</strong> PC gaming offers unparalleled customization and performance. Gamers can build systems tailored to their preferences, from budget-friendly setups to high-end rigs capable of running the most demanding titles at maximum settings.</p>
+
+      <p><strong>Mobile Gaming:</strong> Smartphones have democratized gaming, making it accessible to billions worldwide. Mobile games range from casual puzzles to complex strategy games, with titles like PUBG Mobile and Genshin Impact proving mobile can deliver console-quality experiences.</p>
+
+      <h3>Popular Game Genres</h3>
+      <p><strong>Action Games:</strong> Fast-paced gameplay requiring quick reflexes and hand-eye coordination. Titles like Call of Duty, Grand Theft Auto, and Assassin's Creed dominate this category with cinematic storytelling and immersive worlds.</p>
+
+      <p><strong>RPG (Role-Playing Games):</strong> Deep narratives, character customization, and progression systems define RPGs. Games like The Witcher 3, Final Fantasy, and Elden Ring offer hundreds of hours of content with branching storylines.</p>
+
+      <p><strong>Strategy Games:</strong> Requiring tactical thinking and planning, strategy games challenge players' decision-making skills. Civilization, Age of Empires, and Total War series exemplify this genre's complexity and depth.</p>
+
+      <p><strong>Sports Games:</strong> Realistic simulations of real-world sports, from FIFA and NBA 2K to F1 racing games. These titles capture the excitement and authenticity of professional sports.</p>
+
+      <p><strong>Puzzle Games:</strong> Brain-teasing challenges that test logic and problem-solving abilities. Tetris, Portal, and The Witness showcase how puzzles can be both entertaining and intellectually stimulating.</p>
+
+      <h3>Gaming Communities and Esports</h3>
+      <p>Gaming has fostered vibrant communities where players connect, share strategies, and form lasting friendships. Online platforms like Discord, Twitch, and YouTube Gaming have become central hubs for gaming culture.</p>
+
+      <p><strong>Esports:</strong> Competitive gaming has grown into a billion-dollar industry with professional leagues, tournaments, and sponsorships. Games like League of Legends, Dota 2, and Counter-Strike host world championships with millions in prize pools.</p>
+
+      <p><strong>Streaming:</strong> Content creators have turned gaming into entertainment, with streamers building massive audiences by sharing gameplay, commentary, and personality. Platforms like Twitch and YouTube Gaming enable real-time interaction between creators and viewers.</p>
+
+      <h3>Gaming Technology Trends</h3>
+      <p><strong>Virtual Reality (VR):</strong> VR gaming immerses players in fully 3D environments using headsets and motion controllers. Games like Half-Life: Alyx and Beat Saber demonstrate VR's potential for revolutionary gameplay experiences.</p>
+
+      <p><strong>Augmented Reality (AR):</strong> AR overlays digital elements onto the real world, as seen in Pokémon GO. This technology blends physical and virtual spaces, creating unique interactive experiences.</p>
+
+      <p><strong>Cloud Gaming:</strong> Services like Google Stadia, Xbox Cloud Gaming, and NVIDIA GeForce Now allow players to stream games without powerful hardware. This technology makes high-end gaming accessible on any device with internet connectivity.</p>
+
+      <p><strong>Ray Tracing:</strong> Advanced lighting technology that simulates how light interacts with surfaces in real life. This creates more realistic reflections, shadows, and global illumination in games.</p>
+
+      <h3>Gaming and Education</h3>
+      <p>Educational games combine entertainment with learning, making complex subjects engaging and accessible. Games like Minecraft: Education Edition and Kerbal Space Program teach physics, engineering, and creativity through interactive gameplay.</p>
+
+      <p><strong>Gamification:</strong> Applying game design elements to non-game contexts improves engagement and motivation. Educational platforms use achievements, leaderboards, and progress tracking to enhance learning experiences.</p>
+
+      <h3>Gaming Health and Wellness</h3>
+      <p>While gaming offers numerous benefits like improved hand-eye coordination, problem-solving skills, and social connections, maintaining balance is crucial. Setting time limits, taking breaks, and ensuring physical activity are essential for healthy gaming habits.</p>
+
+      <p><strong>Accessibility:</strong> Game developers increasingly focus on making games accessible to players with disabilities. Features like customizable controls, colorblind modes, and difficulty options ensure everyone can enjoy gaming.</p>
+
+      <h3>Future of Gaming</h3>
+      <p>The future of gaming promises even more immersive experiences with advancements in AI, machine learning, and neural interfaces. Games will become more personalized, with AI adapting to individual play styles and preferences.</p>
+
+      <p><strong>Metaverse:</strong> The concept of interconnected virtual worlds where users can socialize, work, and play. Companies are investing heavily in creating persistent digital spaces that blend gaming, social interaction, and commerce.</p>
+
+      <p><strong>Blockchain Gaming:</strong> NFTs and cryptocurrency are entering gaming, enabling true ownership of in-game assets. Players can buy, sell, and trade digital items across different games and platforms.</p>
+
+      <p>Gaming continues to evolve, pushing technological boundaries and creating new forms of entertainment. As hardware becomes more powerful and software more sophisticated, the line between games and reality will continue to blur, offering experiences we can only imagine today.</p>
+    </div>
+  </div>
+
+  <!-- 🦶 Footer -->
   <footer>
-    © 2025 TeraboxLinke |
-    <a href="#" style="color: var(--primary); text-decoration: none;">Privacy Policy</a>
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">About Us</a>
+        <a href="#">Contact</a>
+        <a href="#">Help Center</a>
+      </div>
+      <div class="footer-copyright">
+        © 2025 TeraboxLinke. All rights reserved. | Gaming Platform
+      </div>
+    </div>
   </footer>
 
   <script>
@@ -344,7 +963,7 @@
       const initialAdTimer = document.getElementById('initialAdTimer');
       const initialSkipBtn = document.getElementById('initialSkipBtn');
 
-      let countdown = 6;
+      let countdown = 5;
       let intervalId = null;
       let adShown = false;
 
@@ -360,22 +979,22 @@
         initialAdOverlay.style.display = 'flex';
         overlay.textContent = '⏳ Loading Ad...';
 
-        countdown = 6;
+        countdown = 5;
         initialAdTimer.style.display = 'block';
         initialSkipBtn.style.display = 'none';
-        initialAdTimer.textContent = `⏳ Wait ${countdown} seconds...`;
+        initialAdTimer.textContent = `⏳ Please wait ${countdown} seconds...`;
 
         // Display initial ad
         if (window.googletag) {
           googletag.cmd.push(function() {
-            googletag.display('div-gpt-initial-ad');
+            googletag.display('div-gpt-ad-1766671255926-0');
           });
         }
 
         intervalId = setInterval(() => {
           countdown--;
           if (countdown > 0) {
-            initialAdTimer.textContent = `⏳ Wait ${countdown} seconds...`;
+            initialAdTimer.textContent = `⏳ Please wait ${countdown} seconds...`;
           } else {
             clearInterval(intervalId);
             initialAdTimer.style.display = 'none';
@@ -392,6 +1011,32 @@
       // Skip button -> redirect to original link
       initialSkipBtn.addEventListener('click', () => {
         window.location.href = originalLink;
+      });
+
+      // View More Games functionality
+      const viewMoreBtn = document.getElementById('viewMoreBtn');
+      const hiddenGames = document.querySelectorAll('.game-box.hidden');
+      let gamesExpanded = false;
+
+      viewMoreBtn.addEventListener('click', () => {
+        if (!gamesExpanded) {
+          // Show all hidden games
+          hiddenGames.forEach(game => {
+            game.classList.remove('hidden');
+          });
+          viewMoreBtn.textContent = 'Show Less';
+          gamesExpanded = true;
+        } else {
+          // Hide games again
+          hiddenGames.forEach(game => {
+            game.classList.add('hidden');
+          });
+          viewMoreBtn.textContent = 'View More Games';
+          gamesExpanded = false;
+          
+          // Scroll to gaming section
+          document.querySelector('.gaming-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
       });
     });
   </script>
